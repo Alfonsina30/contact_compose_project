@@ -29,7 +29,7 @@ fun SearchScreen(
         it.name.contains(query, ignoreCase = true) || it.phone.contains(query)
     }
 
-    Column(modifier = Modifier.fillMaxSize().systemBarsPadding()) {
+    Column(modifier = Modifier.fillMaxSize().systemBarsPadding()) { // systemBarsPadding evitare che l'elenco finisca sotto la barra di navigazione
         Row(verticalAlignment = Alignment.CenterVertically) {
             IconButton(onClick = onBack) {
                 Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = Orange)
