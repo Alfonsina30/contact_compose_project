@@ -20,9 +20,10 @@ import com.example.whatscontacts.model.Contact
 @Composable
 fun ContactRow(contact: Contact, trailing: @Composable () -> Unit) {
     Row(
-        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
+        // Avatar 
         Box(
             modifier = Modifier
                 .size(40.dp)
@@ -32,11 +33,17 @@ fun ContactRow(contact: Contact, trailing: @Composable () -> Unit) {
         ) {
             Icon(Icons.Default.Person, contentDescription = null, tint = Color(0xFF5D4037))
         }
+        
+        // space 
         Spacer(Modifier.width(12.dp))
+        
+        // contact data 
         Column(modifier = Modifier.weight(1f)) {
             Text(contact.name, fontWeight = FontWeight.Medium)
             Text(contact.phone, style = MaterialTheme.typography.bodySmall)
         }
+
+        //logic for delete contact 
         trailing()
     }
 }
