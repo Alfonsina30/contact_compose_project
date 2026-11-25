@@ -64,7 +64,8 @@ fun MainScreen(
                 Text(
                     "Contact selected",
                     fontWeight = FontWeight.Bold,
-                    modifier = Modifier.align(Alignment.CenterHorizontally).padding(8.dp)
+                    modifier = Modifier.align(Alignment.CenterHorizontally)
+                        .padding(15.dp)
                 )
                 LazyColumn {
                     items(selected, key = { it.id }) { contact ->
